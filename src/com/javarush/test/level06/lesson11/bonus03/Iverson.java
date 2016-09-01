@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
 17
 */
 
-public class Solution
+public class Iverson
 {
     public static void main(String[] args) throws Exception
     {

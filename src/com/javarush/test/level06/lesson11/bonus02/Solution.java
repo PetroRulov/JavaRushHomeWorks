@@ -34,22 +34,18 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         String grandPaName = reader.readLine();
-        Cat catGrandPa = new Cat(grandPaName);
-
         String grandMaName = reader.readLine();
-        Cat catGrandMa = new Cat(grandMaName);
-
         String fatherName = reader.readLine();
-        Cat catFather = new Cat(fatherName, null, catGrandPa);
-
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName, catGrandMa);
-
         String sonName = reader.readLine();
-        Cat catSon = new Cat(sonName, catMother, catFather);
-
         String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother, catFather);
+
+        Cat catGrandPa = new Cat(grandPaName);
+        Cat catGrandMa = new Cat(grandMaName);
+        Cat catFather = new Cat(fatherName, catGrandPa);
+        Cat catMother = new Cat(motherName, null, catGrandMa);
+        Cat catSon = new Cat(sonName, catFather, catMother);
+        Cat catDaughter = new Cat(daughterName, catFather, catMother);
 
         System.out.println(catGrandPa);
         System.out.println(catGrandMa);
@@ -62,25 +58,25 @@ public class Solution
     public static class Cat
     {
         private String name;
-        private Cat mother;
         private Cat father;
+        private Cat mother;
 
         Cat(String name)
         {
             this.name = name;
         }
 
-        Cat(String name, Cat mother)
+        Cat(String name, Cat father)
         {
             this.name = name;
-            this.mother = mother;
+            this.father = father;
         }
 
-        Cat(String name, Cat mother, Cat father)
+        Cat(String name, Cat father, Cat mother)
         {
             this.name = name;
-            this.mother = mother;
             this.father = father;
+            this.mother = mother;
         }
 
         @Override

@@ -62,7 +62,7 @@ public class Solution
     public static class Cat
     {
         private String name;
-        private Cat parent;
+        private Cat mother;
         private Cat father;
 
         Cat(String name)
@@ -70,31 +70,34 @@ public class Solution
             this.name = name;
         }
 
-        Cat(String name, Cat parent)
+        Cat(String name, Cat mother)
         {
             this.name = name;
-            this.parent = parent;
+            this.mother = mother;
         }
 
-        Cat(String name, Cat parent, Cat father)
+        Cat(String name, Cat mother, Cat father)
         {
             this.name = name;
-            this.parent = parent;
+            this.mother = mother;
             this.father = father;
         }
 
         @Override
-        public String toString()
-        {
-            if(parent == null && father != null){
-                return "Cat name is " + name + ", no mother," + " father is " + father.name;
-            }else if(parent != null && father == null){
-                return "Cat name is " + name + ", mother is " + parent.name + ", no father";
-            }else if(parent != null && father.name != null){
-                return "Cat name is " + name + ", mother is " + parent.name + ", father is " + father.name;
+        public String toString(){
+            StringBuilder sb = new StringBuilder();
+            sb.append(String.format("Cat name is %s", name));
+            if (mother == null){
+                sb.append(", no mother");
             }else{
-                return "Cat name is " + name + ", no mother, no father ";
+                sb.append(", mother is " + mother.name);
             }
+            if (father == null){
+                sb.append(", no father");
+            }else{
+                sb.append(", father is " + father.name);
+            }
+            return sb.toString();
         }
     }
 }

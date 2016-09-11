@@ -40,20 +40,21 @@ public class RemoveWIthIterator
 
         //INTERESTING METHOD collection1.removeAll(collection2)
 
-        Collection<Integer> l = new ArrayList<Integer>();
+        Collection<Integer> listInt = new ArrayList<Integer>();
         Collection<Integer> itemsToRemove = new ArrayList<Integer>();
         for (int i=0; i < 10; ++i) {
-            l.add(new Integer(4));
-            l.add(new Integer(5));
-            l.add(new Integer(6));
+            listInt.add(new Integer(4));
+            listInt.add(new Integer(5));
+            listInt.add(new Integer(6));
         }
-        for (Integer i : l)
+        for (Integer i : listInt)
         {
             if (i.intValue() == 5)
                 itemsToRemove.add(i);
         }
 
-        l.removeAll(itemsToRemove);
-        System.out.println(l);
+        listInt.removeAll(itemsToRemove);
+
+        System.out.println(listInt);
     }
 }

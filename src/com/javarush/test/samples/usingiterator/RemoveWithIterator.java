@@ -1,4 +1,4 @@
-package com.javarush.test.samples.iteratorusing;
+package com.javarush.test.samples.usingiterator;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by prulov on 07.09.2016.
  */
-public class RemoveWIthIterator
+public class RemoveWithIterator
 {
     public static void main(String[] args)
     {

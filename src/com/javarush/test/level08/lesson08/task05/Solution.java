@@ -1,8 +1,6 @@
 package com.javarush.test.level08.lesson08.task05;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 /* Удалить людей, имеющих одинаковые имена
 Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя».
@@ -25,20 +23,22 @@ public class Solution
         mapName.put("Timchenko", "Andriy");
         mapName.put("Nikishayev", "Sergiy");
         return mapName;
-
     }
 
     public static void removeTheFirstNameDuplicates(HashMap<String, String> map)
     {
-        HashSet<String> copy = new HashSet<String>();
-        for (Map.Entry<String, String> pair: map.entrySet())
-        {
-            String value = pair.getValue();
-            copy.add(value);
-            if (pair.getValue().equals(value))
-                map.remove(pair.getKey());
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        List<String> duplicates = new ArrayList<>();
+        while (iterator.hasNext()){
+            Map.Entry<String, String> pair = iterator.next();
+            if(getCountTheSameFirstName(map, pair.getValue()) > 1){
+                iterator.remove();
+                duplicates.add(pair.getValue());
+            }
         }
-
+        for(String name : duplicates){
+            removeItemFromMapByValue(map, name);
+        }
     }
 
     public static void removeItemFromMapByValue(HashMap<String, String> map, String value)
@@ -50,4 +50,23 @@ public class Solution
                 map.remove(pair.getKey());
         }
     }
+
+    public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
+    {
+        int result = 0;
+        for(Map.Entry<String, String> pair : map.entrySet()){
+            String value = pair.getValue();
+            if(name.equals(value)){
+                result++;
+            }
+        }
+        return result;
+    }
+
+//    public static void main(String[] args)
+//    {
+//        HashMap<String, String> map = createMap();
+//        removeTheFirstNameDuplicates(map);
+//        for(Map.Entry<String, String> pair: map.entrySet()) System.out.println(pair.getValue());
+//    }
 }

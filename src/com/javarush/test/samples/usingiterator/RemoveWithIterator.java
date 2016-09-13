@@ -45,10 +45,29 @@ public class RemoveWithIterator
         }
 
         for(Integer number : intSet) System.out.println(number);
+        System.out.println();
 
+        // ITERATOR for HashMap
+        Map<String, String> map = new HashMap<>();
+        map.put("Rulov", "Petro");
+        map.put("Borkeyev", "Sergiy");
+        map.put("Danchenko", "Andriy");
+        Iterator<Map.Entry<String, String>> iter = map.entrySet().iterator();
+
+        while (iter.hasNext())
+        {
+            //получение «пары» элементов
+            Map.Entry<String, String> pair = iter.next();
+            String key = pair.getKey();            //ключ
+            String value = pair.getValue();        //значение
+            if(value.equals("Andriy")){
+                iter.remove();
+            }
+        }
+        for(Map.Entry<String, String> pair : map.entrySet()) System.out.println(pair.getKey() + " : " + pair.getValue());
+        System.out.println();
 
         //INTERESTING METHOD collection1.removeAll(collection2)
-
         Collection<Integer> listInt = new ArrayList<Integer>();
         Collection<Integer> itemsToRemove = new ArrayList<Integer>();
         for (int i=0; i < 10; ++i) {

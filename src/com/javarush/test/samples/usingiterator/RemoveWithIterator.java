@@ -1,9 +1,6 @@
 package com.javarush.test.samples.usingiterator;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by prulov on 07.09.2016.
@@ -27,15 +24,27 @@ public class RemoveWithIterator
         list.add("kormila.");
 
         for (Iterator<String> iterator = list.iterator(); iterator.hasNext();) {
-            String string = iterator.next();
-            if (string.isEmpty()) {
-                // Remove the current element from the iterator and the from the list.
-                iterator.remove();
-            }
+        String string = iterator.next();
+        if (string.isEmpty()) {
+            // Remove the current element from the iterator and the from the list.
+            iterator.remove();
         }
+    }
 
         for(String str : list) System.out.print(str);
         System.out.println();
+
+        // FOR SET(HashSet)
+
+        HashSet<Integer> intSet = new HashSet<>();
+        for(int i=0; i<20; i++) intSet.add(i);
+
+        Iterator<Integer> iterator = intSet.iterator();
+        while (iterator.hasNext()){
+            if (iterator.next()>10) iterator.remove();
+        }
+
+        for(Integer number : intSet) System.out.println(number);
 
 
         //INTERESTING METHOD collection1.removeAll(collection2)

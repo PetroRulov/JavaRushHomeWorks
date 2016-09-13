@@ -3,6 +3,7 @@ package com.javarush.test.samples.listarrays;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by prulov on 12.09.2016.
@@ -40,5 +41,19 @@ public class SetALElement
         for(String string : list) System.out.println(string);
         System.out.println();
         for(String string : linkedList) System.out.println(string);
+        System.out.println();
+
+        List<Integer> listInt = new ArrayList<>();
+        for (int i = 0; i < 20; i++){
+            Random r = new Random();
+            listInt.add(r.nextInt(1000));
+        }
+        for(int number : listInt) System.out.print(number + ", ");
+        System.out.println();
+        for (int i = 0; i < 20; i++){
+            Random r = new Random();
+            listInt.set(i, r.nextInt(1000));
+        }
+        for(int number : listInt) System.out.print(number + ", ");
     }
 }

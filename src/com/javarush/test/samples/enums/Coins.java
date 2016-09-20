@@ -15,4 +15,31 @@ public enum Coins{
     public int getValue(){
         return value;
     }
+
+    @Override
+    public String toString(){
+        switch (this){
+            case PENNY:
+                System.out.println("Penny: " + value);
+                break;
+            case TWOPENNY:
+                System.out.println("Twopenny: " + value);
+                break;
+            case NICKLE:
+                System.out.println("Nickle: " + value);
+                break;
+            case DIME:
+                System.out.println("Dime: " + value);
+                break;
+            case QUARTER:
+                System.out.println("Quarter: " + value);
+                break;
+            case FIFTY:
+                System.out.println("FIFTY: " + value);
+                break;
+            default:
+                System.out.println("Quarter: " + value);
+        }
+        return super.toString();
+    }
 }

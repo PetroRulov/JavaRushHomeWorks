@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 Задача: Введи с клавиатуры 20 слов и выведи их в алфавитном порядке.
 */
 
-public class Solution
+public class AnotherIverson
 {
     public static void main(String[] args) throws Exception
     {

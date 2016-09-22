@@ -28,18 +28,17 @@ public class Solution
 
     public static void sort(String[] array)
     {
-        for (int i = array.length - 1; i >= 0; i--) {
-            boolean sorted = true;
-            for (int j = 0; j < i; j++) {
-                if (isGreaterThan(array[j].substring(0, 1), array[j+1].substring(0, 1))) {
-                    String temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
-                    sorted = false;
+        boolean flag = true;
+        String temp;
+        while(flag){
+            flag=false;
+            for (int j = 0; j < array.length - 1; j++) {
+                if(isGreaterThan(array[j],array[j+1])) {
+                    temp=array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=temp;
+                    flag=true;
                 }
-            }
-            if(sorted) {
-                break;
             }
         }
     }

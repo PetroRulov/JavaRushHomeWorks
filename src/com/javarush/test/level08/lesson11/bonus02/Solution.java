@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /* Нужно добавить в программу новую функциональность
 Задача: Программа определяет, какая семья (фамилию) живёт в доме с указанным номером.
@@ -30,22 +32,23 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         //list of addresses
-        List<String> addresses = new ArrayList<String>();
+        Map<String, String> addresses = new HashMap<>();
+
         while (true)
         {
             String family = reader.readLine();
-            if (family.isEmpty()) break;
-
-            addresses.add(family);
+            if (family.isEmpty()){
+                break;
+            }
+            String city = reader.readLine();
+            addresses.put(family, city);
         }
 
-        //read home number
-        int houseNumber = Integer.parseInt(reader.readLine());
+        String city = reader.readLine();
 
-        if (0 <= houseNumber && houseNumber < addresses.size())
-        {
-            String familySecondName = addresses.get(houseNumber);
-            System.out.println(familySecondName);
+        for(Map.Entry<String, String> pair : addresses.entrySet()){
+
+            if(city.equals(pair.getKey())) System.out.println(pair.getValue());
         }
     }
 }

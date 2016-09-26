@@ -14,14 +14,17 @@ ArithmeticException и URISyntaxException. Как это сделать?
 
 public class Solution
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args) throws ArithmeticException, URISyntaxException
     {
-        //напишите тут ваш код
-
-        method1();
-
-        //напишите тут ваш код
-
+        try{
+            method1();
+        }
+        catch(NullPointerException npe){
+            System.out.println("NullPointerException has been caught!");
+        }
+        catch(FileNotFoundException fnfe){
+            System.out.println("FileNotFoundException has been caught!");
+        }
     }
 
     public static void method1() throws NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxException

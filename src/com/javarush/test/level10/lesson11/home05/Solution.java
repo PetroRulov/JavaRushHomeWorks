@@ -48,7 +48,7 @@ public class Solution
         String str = sb.toString();
         char[] strArray = str.toCharArray();
 
-            for(Character alph : alphabet){
+        for(Character alph : alphabet){
             int count = 0;
             for(Character strar : strArray){
                 if(alph.equals(strar)){

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/samples/iverson/ComplicatedDoNotUseAnyMore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/samples/iverson/Simple.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/samples/iverson/UsingWhileFlag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/samples/miscellaneous/TryNewBigDecimal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home05/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home05/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,16 +61,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson04/task02/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson04/task03/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -134,13 +121,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home05/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
               <folding>
-                <marker date="1475929550807" expanded="true" signature="1079:1291" ph="..." />
+                <marker date="1475929892552" expanded="true" signature="1079:1291" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home06/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding>
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1452#1453#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,7 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level08/lesson11/bonus02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level08/lesson11/bonus03/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level08/lesson11/bonus03/AnotherIverson.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level09/lesson02/task01/Solution.java" />
@@ -243,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home03/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home04/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home05/Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home06/Solution.java" />
       </list>
     </option>
   </component>
@@ -365,6 +365,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="miscellaneous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home06" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1086,7 +1116,7 @@
       <workItem from="1475173271553" duration="90000" />
       <workItem from="1475660063260" duration="17243000" />
       <workItem from="1475829182513" duration="18094000" />
-      <workItem from="1475914990585" duration="3591000" />
+      <workItem from="1475914990585" duration="7470000" />
     </task>
     <task id="LOCAL-00001" summary="fc with lesson6">
       <created>1472548744620</created>
@@ -1298,11 +1328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475680137534</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="commit 08102016-1">
+      <created>1475929588517</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1475929588517</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198242000" />
+    <option name="totallyTimeSpent" value="202121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
@@ -1370,7 +1407,8 @@
     <MESSAGE value="commit 26092016" />
     <MESSAGE value="commit 27092016" />
     <MESSAGE value="commit 05102016" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 05102016" />
+    <MESSAGE value="commit 08102016-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 08102016-1" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1382,13 +1420,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level09/lesson02/task03/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="40" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level09/lesson02/task05/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1638,6 +1669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1653,6 +1685,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <marker date="1475830033649" expanded="true" signature="248:938" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1667,6 +1702,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <marker date="1475833457716" expanded="true" signature="365:582" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1744,10 +1782,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home05/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
           <folding>
-            <marker date="1475929550807" expanded="true" signature="1079:1291" ph="..." />
+            <marker date="1475929892552" expanded="true" signature="1079:1291" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level10/lesson11/home06/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
           </folding>
         </state>
       </provider>

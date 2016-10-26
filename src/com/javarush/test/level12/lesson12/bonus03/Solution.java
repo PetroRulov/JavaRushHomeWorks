@@ -26,33 +26,46 @@ public class Solution
         {
             return new Pair<Integer, Integer>(null, null);
         }
+        // мое решение - сложное и непонятное
+//        Map<Integer, Integer> map = new HashMap<>();
+//        for(int i = 0; i < array.length; i++){
+//            map.put(i, array[i]);
+//        }
+//        for (int i = array.length - 1; i >= 0; i--) {
+//            for (int j = 0; j < i; j++) {
+//                if (array[j] > array[j+1]) {
+//                    int temp = array[j];
+//                    array[j] = array[j+1];
+//                    array[j+1] = temp;
+//                }
+//            }
+//        }
+//        Iterator<Map.Entry<Integer, Integer>> iter = map.entrySet().iterator();
+//        Integer index = 0;
+//        while (iter.hasNext())
+//        {
+//            Map.Entry<Integer, Integer> pair = iter.next();
+//            Integer key = pair.getKey();            //ключ
+//            Integer value = pair.getValue();        //значение
+//            if(value == array[0]){
+//                index = key;
+//                break;
+//            }
+//        }
+//        return new Pair<Integer, Integer>(array[0], index);
 
-        Map<Integer, Integer> map = new HashMap<>();
-        for(int i = 0; i < array.length; i++){
-            map.put(i, array[i]);
-        }
-        for (int i = array.length - 1; i >= 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (array[j] > array[j+1]) {
-                    int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
-                }
+        //чужое решение - простое и изящное
+        Pair<Integer, Integer> num = null;
+        Integer min = array[0];
+        Integer indexMin = 0;
+        for (int i = 1; i < array.length; i++){
+            if (array[i] < min){
+                min = array[i];
+                indexMin = i;
             }
+            num = new Pair<Integer, Integer>(min, indexMin);
         }
-        Iterator<Map.Entry<Integer, Integer>> iter = map.entrySet().iterator();
-        Integer index = 0;
-        while (iter.hasNext())
-        {
-            Map.Entry<Integer, Integer> pair = iter.next();
-            Integer key = pair.getKey();            //ключ
-            Integer value = pair.getValue();        //значение
-            if(value == array[0]){
-                index = key;
-                break;
-            }
-        }
-        return new Pair<Integer, Integer>(array[0], index);
+        return num;
     }
 
 

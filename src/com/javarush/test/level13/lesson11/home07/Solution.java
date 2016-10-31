@@ -18,13 +18,23 @@ public class Solution
         SimpleObject<T> getInstance();
     }
 
+//    public static class StringObject<T> implements SimpleObject<String>
+//    {
+//
+//        @Override
+//        public SimpleObject<String> getInstance()
+//        {
+//            return this;
+//        }
+//    }
+
     public static class StringObject<T> implements SimpleObject<String>
     {
 
         @Override
-        public SimpleObject<String> getInstance()
+        public StringObject<String> getInstance()
         {
-            return this;
+            return new StringObject<>();
         }
     }
 

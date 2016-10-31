@@ -37,9 +37,6 @@ public class Solution
                 }
             }
         }
-
-
-
         return new Pair<Integer, Integer> (array[0], array[array.length - 1]);
     }
 

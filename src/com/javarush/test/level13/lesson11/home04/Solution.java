@@ -17,7 +17,7 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String fileName = reader.readLine();
-        //fileName = "D:\\TEST\\" + fileName + ".txt";
+        fileName = "D:\\TEST\\" + fileName + ".txt";
 
         boolean flag = true;
         List<String> list = new ArrayList<>();
@@ -29,7 +29,8 @@ public class Solution
             }
         }
 
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
+        //BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
         for (String s : list)
         {
             writer.write(s);

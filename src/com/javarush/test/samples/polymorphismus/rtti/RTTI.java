@@ -1,4 +1,4 @@
-package com.javarush.test.samples.polymorphismus.runtimetypeidentifacation;
+package com.javarush.test.samples.polymorphismus.rtti;
 
 /**
  * Created by prulov on 25.10.2016.

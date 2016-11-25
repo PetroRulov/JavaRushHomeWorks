@@ -11,10 +11,12 @@ import java.util.Calendar;
 public class JavaClock2 extends JFrame implements Threadable {
 
     private JLabel clockLabel = new JLabel();
+    private AlienThread alienThread;
 
-    public JavaClock2() {
+    public JavaClock2()
+    {
         // Установить заголовок
-        setTitle("ClockThread");
+        setTitle("JAVAClock - 2: uses AlienThread");
 
         // Выравнять метку по горизонтали - есть такой метод у Label
         clockLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -28,13 +30,13 @@ public class JavaClock2 extends JFrame implements Threadable {
         getContentPane().add(clockLabel);
 
         // Установить размеры окна
-        setBounds(800, 600, 600, 200);
+        setBounds(0, 400, 600, 200);
 
         // ОБРАТИТЬ ВНИМАНИЕ !!!
         // Создаем отдельный поток, который должен обновлять значение метки
-        MyThread myThread = new MyThread();
-        myThread.setClock(this);
-        myThread.start();
+        alienThread = new AlienThread();
+        alienThread.setClock(this);
+        alienThread.start();
     }
 
     @Override
@@ -46,5 +48,10 @@ public class JavaClock2 extends JFrame implements Threadable {
                 clockLabel.setText(df.format(Calendar.getInstance().getTime()));
             }
         });
+    }
+
+    public AlienThread getAlienThread()
+    {
+        return alienThread;
     }
 }

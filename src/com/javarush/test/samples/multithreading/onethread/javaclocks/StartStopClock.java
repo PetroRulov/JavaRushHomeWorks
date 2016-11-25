@@ -23,7 +23,7 @@ public class StartStopClock extends JFrame implements Threadable, ActionListener
     public StartStopClock()
     {
         // Установить заголовок
-        setTitle("ClockThread");
+        setTitle("StartStopClock");
 
         // Выравнять метку по горизонтали - есть такой метод у Label
         clockLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -82,6 +82,7 @@ public class StartStopClock extends JFrame implements Threadable, ActionListener
                 clockThread = new MyThread();
                 clockThread.setClock(this);
                 clockThread.start();
+                //System.out.println(clockThread.toString());
             }
         }
         if (STOP.equals(ae.getActionCommand()))
@@ -92,5 +93,10 @@ public class StartStopClock extends JFrame implements Threadable, ActionListener
                 clockThread = null;
             }
         }
+    }
+
+    public MyThread getClockThread()
+    {
+        return clockThread;
     }
 }

@@ -1,28 +1,23 @@
 package com.javarush.test.samples.multithreading.onethread.javaclocks;
 
-public class MyThread extends Thread {
-
+public class AlienThread extends Thread
+{
     private Threadable clock;
-    private volatile boolean isRunning = true;
 
     public void setClock(Threadable clock)
     {
         this.clock = clock;
     }
 
-    public void stopClock() {
-        isRunning = false;
-    }
-
     @Override
-    public void run() {
-        while (isRunning) {
+    public void run(){
+        while (!Thread.interrupted()) {
             clock.setTime();
             //System.out.println(this.toString() + " is flows");
             try {
                 Thread.sleep(500);
-
-            } catch (Exception e) {
+            } catch (InterruptedException ex) {
+                //System.out.printf("AllienThread %s interrupted\n", name);
                 Thread.currentThread().interrupt();
             }
         }
@@ -31,6 +26,6 @@ public class MyThread extends Thread {
     @Override
     public String toString()
     {
-        return "MyThread{}";
+        return "AlienThread{}";
     }
 }

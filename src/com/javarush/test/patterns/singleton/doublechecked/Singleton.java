@@ -6,7 +6,7 @@ public class Singleton
 
     // This is a classic example of double checked locking in Singleton
     //Read more: http://javarevisited.blogspot.com/2011/04/synchronization-in-java-synchronized.html#ixzz4QvruMXI9
-    private static Singleton getInstance(){
+    public static Singleton getInstance(){
         if(_instance == null){
             synchronized (Singleton.class){
                 if(_instance == null){

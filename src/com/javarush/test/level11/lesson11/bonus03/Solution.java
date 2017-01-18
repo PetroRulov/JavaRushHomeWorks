@@ -4,9 +4,7 @@ package com.javarush.test.level11.lesson11.bonus03;
 Написать метод, который возвращает минимальное и максимальное числа в массиве.
 */
 
-import jdk.management.resource.internal.inst.FileOutputStreamRMHooks;
-
-import java.util.Iterator;
+//import jdk.management.resource.internal.inst.FileOutputStreamRMHooks;
 
 public class Solution
 {

@@ -10,6 +10,7 @@ public class RemoveWithIterator
     public static void main(String[] args)
     {
         List<String> list = new ArrayList<>();
+        list.add("?");
         list.add("Soroka");
         list.add("-");
         list.add("");
@@ -25,7 +26,7 @@ public class RemoveWithIterator
 
         for (Iterator<String> iterator = list.iterator(); iterator.hasNext();) {
         String string = iterator.next();
-        if (string.isEmpty()) {
+        if (string.isEmpty() || "?".equals(string)) {
             // Remove the current element from the iterator and the from the list.
             iterator.remove();
         }
